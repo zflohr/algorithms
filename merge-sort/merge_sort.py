@@ -1,4 +1,14 @@
 def merge(arr: list[int], left: int, mid: int, right: int) -> None:
+    """Merge two sublists of arr to produce a new, sorted sublist.
+
+    Args:
+        arr: The initial unsorted list or a rearrangement thereof
+            produced by calls to merge.
+        left: The index of the leftmost item in a sublist of arr.
+        mid: The index that defines the end of a sublist and the
+            beginning of another in arr.
+        right: The index of the rightmost item in a sublist of arr.
+    """
     n1 = mid - left + 1
     n2 = right - mid
     left_half = [arr[left + i] for i in range(n1)]
@@ -23,6 +33,14 @@ def merge(arr: list[int], left: int, mid: int, right: int) -> None:
         k += 1
 
 def merge_sort(arr: list[int], left: int, right: int) -> None:
+    """Sort arr via a divide-and-conquer paradigm.
+
+    Args:
+        arr: The initial unsorted list or a rearrangement thereof
+            produced by calls to merge.
+        left: The index of the leftmost item in a sublist of arr.
+        right: The index of the rightmost item in a sublist of arr.
+    """
     if left < right:
         mid = (left + right) // 2
         merge_sort(arr, left, mid)
