@@ -12,7 +12,7 @@ Perfect binary tree:
       8     9   10   11 12   13   14    15
 """
 
-from post_order_traversal import Node, print_post_order_traversal
+from traversals import Node, post_order_traversal
 
 def main() -> None:
     """Print the nodes of a perfect binary tree."""
@@ -23,7 +23,7 @@ def main() -> None:
                 Node(3,
                      Node(6, Node(12), Node(13)),
                      Node(7, Node(14), Node(15))))
-    print_post_order_traversal(tree)
+    post_order_traversal(tree)
 
 if __name__ == '__main__':
     main()

@@ -1,5 +1,5 @@
 class Node:
-    """A node of a perfect binary tree.
+    """A node of a binary tree.
 
     Public attributes:
         data: The value at a node.
@@ -20,14 +20,14 @@ class Node:
         self.left = left
         self.right = right
 
-def print_post_order_traversal(node: Node) -> None:
+def post_order_traversal(node: Node) -> None:
     """Print node values in a post-order traversal of a binary tree.
 
     Args:
-        node: A node of a perfect binary tree.
+        node: A node of a binary tree.
     """
     if not node:
         return
-    print_post_order_traversal(node.left)
-    print_post_order_traversal(node.right)
+    post_order_traversal(node.left)
+    post_order_traversal(node.right)
     print(node.data)
