@@ -15,7 +15,11 @@ Perfect binary tree:
        16  17  18  19   20  21  22 23 24  25  26  27   28  29  30  31
 """
 
-from traversals import Node, pre_order_traversal, post_order_traversal
+from traversals import (
+    Node,
+    pre_order_traversal,
+    in_order_traversal,
+    post_order_traversal)
 
 def main() -> None:
     """Print the nodes of a perfect binary tree."""
@@ -36,6 +40,8 @@ def main() -> None:
                           Node(15, Node(30), Node(31)))))
     print('pre-order traversal:')
     pre_order_traversal(tree)
+    print('\nin-order traversal:')
+    in_order_traversal(tree)
     print('\npost-order traversal:')
     post_order_traversal(tree)
 
