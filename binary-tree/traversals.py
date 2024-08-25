@@ -20,6 +20,18 @@ class Node:
         self.left = left
         self.right = right
 
+def pre_order_traversal(node: Node) -> None:
+    """Print node values in a pre-order traversal of a binary tree.
+
+    Args:
+        node: A node of a binary tree.
+    """
+    if not node:
+        return
+    print(node.data)
+    pre_order_traversal(node.left)
+    pre_order_traversal(node.right)
+
 def post_order_traversal(node: Node) -> None:
     """Print node values in a post-order traversal of a binary tree.
 
