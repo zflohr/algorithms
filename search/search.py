@@ -1,3 +1,18 @@
+def linear_search(arr: list[int], val: int) -> int:
+    """Find the index of val in arr via a linear search.
+
+    Args:
+        arr: An unsorted list of integers.
+        val: The target value to search for in arr.
+
+    Returns:
+        The index of val in arr, or -1 if val isn't in arr.
+    """
+    for i in range(len(arr)):
+        if arr[i] == val:
+            return i
+    return -1
+
 def binary_search(arr: list[int], val: int) -> int:
     """Find the index of val in arr via a binary search.
 
