@@ -26,11 +26,10 @@ def pre_order_traversal(node: Node) -> None:
     Args:
         node: A node of a binary tree.
     """
-    if not node:
-        return
-    print(node.data)
-    pre_order_traversal(node.left)
-    pre_order_traversal(node.right)
+    if node:
+        print(node.data)
+        pre_order_traversal(node.left)
+        pre_order_traversal(node.right)
 
 def in_order_traversal(node: Node) -> None:
     """Print node values in a in-order traversal of a binary tree.
@@ -38,11 +37,10 @@ def in_order_traversal(node: Node) -> None:
     Args:
         node: A node of a binary tree.
     """
-    if not node:
-        return
-    in_order_traversal(node.left)
-    print(node.data)
-    in_order_traversal(node.right)
+    if node:
+        in_order_traversal(node.left)
+        print(node.data)
+        in_order_traversal(node.right)
 
 def post_order_traversal(node: Node) -> None:
     """Print node values in a post-order traversal of a binary tree.
@@ -50,8 +48,7 @@ def post_order_traversal(node: Node) -> None:
     Args:
         node: A node of a binary tree.
     """
-    if not node:
-        return
-    post_order_traversal(node.left)
-    post_order_traversal(node.right)
-    print(node.data)
+    if node:
+        post_order_traversal(node.left)
+        post_order_traversal(node.right)
+        print(node.data)
